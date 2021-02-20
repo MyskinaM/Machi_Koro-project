@@ -41,6 +41,13 @@ p {
     background-color: #009DC8;
 }
 
+.win_back h1 {
+    margin: 0;
+    text-align: center;
+    padding-top: 71px;
+    padding-bottom: 27px;
+}
+
 .win_content {
     width: 972px;
     margin: 0 auto;
@@ -619,6 +626,7 @@ label {
 figcaption {
     text-align: center;
     margin-top: 13px;
+    width: 150px;
 }
 
 .content972 form {
