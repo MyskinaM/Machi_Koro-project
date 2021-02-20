@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мачи Коро - Профиль</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=1' />
+</head>
+<body>
+    <div id="#profile" class="wrapper">
+        <div class="win_back">
+            <h1>профиль</h1>
+            <div class="win_content">
+                <a href="index2.html" class="button278">&lt;- вернуться<br>&emsp;назад</a>
+                <a href="#logout" class="button278">выйти из аккаунта</a>
+            </div>
+            <div class="win_content">
+                <div class="avatar">
+                    <div class="avatar-container avatar-size">
+                        <img src="images/ava.png" class="avatar-image">
+                        <div class="edit-container">
+                            <div>
+                                <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.2481 5.49049L13.8119 3.38517L10.6009 1.00001L9.03704 3.10532M12.2481 5.49049L7.29603 12.1573L3.6054 13.7718L4.08495 9.77216L9.03704 3.10532M12.2481 5.49049L9.03704 3.10532" stroke="white"/>
+                                    </svg>
+                            </div>                          
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="nickname">maki</div>
+                <a href="#change-pas" class="button-changepas">сменить пароль</a>
+            </div>
+            <div class="win_content">
+                <div class="statistics">
+                    <div class="title">Сыграно матчей</div>
+                    <div class="figure">0</div>
+                </div>
+                <div class="statistics">
+                    <div class="title">Построено достопримечательностей</div>
+                    <div class="figure">0</div>
+                </div>
+            </div>
+            <div class="win_content">
+                <div class="statistics">
+                    <div class="title">Выиграно матчей</div>
+                    <div class="figure">0</div>
+                </div>
+                <div class="statistics">
+                    <div class="title">Построено предприятий</div>
+                    <div class="figure">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="logout" class="forg-yo-pas">
+        <a href="#profile" class="forg-yo-pas_area"></a>
+        <div class="forg-yo-pas_body">
+                <div class="forg-yo-pas_content">
+                    <div class="login_title">выход из аккаунта</div>
+                        <div class="group">
+                            <label for="">Вы уверены, что вы хотите выйти из аккаунта?</label>
+                            <div class="container">
+                                <a href="#profile" class="button377">нет</a>
+                                <a href="index.html" class="button377">да</a>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+    <div id="change-pas" class="forg-yo-pas">
+        <a href="#profile" class="forg-yo-pas_area"></a>
+        <div class="forg-yo-pas_body">
+            <form action="">
+                <div class="forg-yo-pas_content">
+                    <div class="login_title">новый пароль</div>
+                        <div class="group">
+                            <label for="">Придумайте сложный пароль</label>
+                            <input placeholder="введите пароль" type="pas">
+                            <input placeholder="повторите пароль" type="pas">
+                            <div class="container">
+                                <a  href="#profile" class="button377">назад</a>
+                                <a href="#pas-changed" class="button377">сохранить</a>
+                            </div>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="pas-changed" class="check-email">
+        <a href="#profile" class="check-email_area"></a>
+        <div class="check-email_body">
+                <div class="check-email_content">
+                    <div class="check-email_text">Пароль изменен</div>
+                    <a href="#profile" class="button377">ок</a>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

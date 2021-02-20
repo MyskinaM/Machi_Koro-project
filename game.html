@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мачи Коро - Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=1' />
+</head>
+<body>
+
+    
+
+    <div class="your-turn" style="display:none;">
+        <div class="text">ваш ход</div>
+    </div>
+
+    <div class="part-turn" style="display:none;">
+        <div class="text">бросок кубика</div>
+    </div>
+    
+    <div id="game" class="wrapper">
+        <div class="cup" id="cup_id">
+            <div class="dice1">
+                <div class="six">
+                    <div class="dote" ></div>
+                    <div class="dote" style="opacity:0;"></div>
+                    <div class="dote"></div>
+                    <div class="dote"></div>
+                    <div class="dote" style="opacity:0;"></div>
+                    <div class="dote"></div>
+                    <div class="dote"></div>
+                    <div class="dote"style="opacity:0;"></div>
+                    <div class="dote"></div>
+                </div>
+            </div>
+            <div class="dice2" style="display:none;">
+                <div class="six"></div>
+            </div>
+        </div>
+
+        <div class="game-buttons">
+            <a class="game-button hov" style="display:none;">Бросок</a>
+            <a href="#store" class="game-button hov">Рынок</a>
+            <a class="game-button hov">Конец хода</a>
+        </div>
+
+
+        <a href="#game_menu" class="button178 hov">Меню</a>
+
+       <div class="game-players">
+            <div class="player you">
+                <div class="elements">
+                    <div class="player-name-game png-you">Maki</div>
+                    <div class="avatar-game ava-g-you">
+                        <div class="avatar-container-game avatar-size-game-you">
+                            <img src="images/ava.png" class="avatar-image">
+                        </div>
+                    </div>
+                    <div class="gold-you">
+                        <div class="gold-count gc-you">3</div>
+                        <img src="images/gold.png" class="gold-image-you">
+                    </div>
+                </div>
+           </div>
+           
+           <div class="player other">
+                <div class="elements">
+                    <div class="player-name-game png-oth">Booker</div>
+                    <div class="avatar-game ava-g-other">
+                        <div class="avatar-container-game avatar-size-game-other">
+                            <img src="images/ava2.png" class="avatar-image">
+                        </div>
+                    </div>
+                    <div class="gold-oth">
+                        <div class="gold-count gc-oth">3</div>
+                        <img src="images/gold.png" class="gold-image-oth">
+                    </div>
+                    <a href="#oth_pl_cards" class="open-oth-table"></a>
+                </div>
+           </div>
+
+        </div>
+
+        <div class="cards">
+            <img class="buy-card" src="images/railwaystation.png" alt="" class="card-size">
+            <img class="buy-card" src="images/shoppingcenter.png" alt="" class="card-size">
+            <img class="buy-card" src="images/TVtower.png" alt="" class="card-size">
+            <img class="buy-card" src="images/amusementpark.png" alt="" class="card-size">
+            
+            <img class="buy-card" src="images/wheatfield-start.png" alt="" class="card-size">
+            <img class="buy-card" src="images/bakery-start.png" alt="" class="card-size">
+        </div>
+
+        
+    </div>
+
+    <div id="oth_pl_cards" class="popup">
+        <a href="#" class="popup-area"></a>
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="#" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="31" cy="31" r="27" fill="#A9ECFF" stroke="#5CC5E1" stroke-width="8"/>
+                    <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                    </a>
+                <div class="popup-head">
+                    <div class="avatar-container-game avatar-size-game-other">
+                        <img src="images/ava3.jpg" class="avatar-image">
+                    </div>
+                    <div class="player-name-game png-oth">Booker</div>
+                    <div class="gold-oth">
+                        <div class="gold-count gc-oth">3</div>
+                        <img src="images/gold.png" class="gold-image-oth">
+                    </div>
+                    <h1>Карты игрока</h1>
+                </div>
+                <div class="popup-inside">
+                    <div class="cards">
+                            <img class="buy-card" src="images/railwaystation.png" alt="" class="card-size">
+                            <img class="buy-card" src="images/shoppingcenter.png" alt="" class="card-size">
+                            <img class="buy-card" src="images/TVtower.png" alt="" class="card-size">
+                            <img class="buy-card" src="images/amusementpark.png" alt="" class="card-size">
+                            
+                            <img class="buy-card" src="images/wheatfield-start.png" alt="" class="card-size">
+                            <img class="buy-card" src="images/bakery-start.png" alt="" class="card-size">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="game_menu" class="popup">
+        <a href="#" class="popup-area"></a>
+        <div class="popup_body">
+            <div class="popup_content-menu">
+                <a href="#" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="31" cy="31" r="27" fill="#5CC5E1" stroke="#A9ECFF" stroke-width="8"/>
+                    <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#A9ECFF" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#A9ECFF" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                    </a>
+                <h1>Меню</h1>
+                <a href="#" class="button575 hov">Вернуться к игре</a>
+                <a href="Machi Koro RULEBOOK PRINT.pdf" class="button575 hov">Как играть</a>
+                <a href="#surrender" class="button575 hov">Сдаться</a>
+                <a href="#exit" class="button575 hov">Выйти</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="surrender" class="forg-yo-pas">
+        <a href="#" class="forg-yo-pas_area"></a>
+        <div class="forg-yo-pas_body">
+                <div class="forg-yo-pas_content">
+                    <div class="login_title">сдаться</div>
+                        <div class="group">
+                            <label for="">Вы уверены, что хотите сдаться?</label>
+                            <div class="container">
+                                <a href="#game_menu" class="button377">нет</a>
+                                <a href="index.html" class="button377">да</a>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+    <div id="exit" class="forg-yo-pas">
+        <a href="#" class="forg-yo-pas_area"></a>
+        <div class="forg-yo-pas_body">
+                <div class="forg-yo-pas_content">
+                    <div class="login_title">Выход</div>
+                        <div class="group">
+                            <label for="">Вы уверены, что хотите выйти?</label>
+                            <div class="container">
+                                <a href="#game_menu" class="button377">нет</a>
+                                <a href="index.html" class="button377">да</a>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+    <div id="store" class="popup">
+        <a href="#" class="popup-area"></a>
+        <div class="popup_body">
+            <div class="popup_content-store">
+                <a href="#" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="31" cy="31" r="27" fill="#A9ECFF" stroke="#5CC5E1" stroke-width="8"/>
+                    <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                    </a>
+                <div class="popup-head">
+                    <div class="gold-oth">
+                        <div class="gold-count gc-oth">3</div>
+                        <img src="images/gold.png" class="gold-image-oth">
+                    </div>
+                    <h1>Рынок</h1>
+                </div>
+                <div class="popup-inside">
+                    <div class="cards">
+                        <a class="buy-card"><img src="images/railway station.png" alt="" class="card-size" style="filter: grayscale(100%);"></a>
+                        <a class="buy-card"><img src="images/shopping center.png" alt="" class="card-size" style="filter: grayscale(100%);"></a>
+                        <a class="buy-card"><img src="images/TV tower.png" alt="" class="card-size" style="filter: grayscale(100%);"></a>
+                        <a class="buy-card"><img src="images/amusement park.png" alt="" class="card-size" style="filter: grayscale(100%);"></a>
+                        <a href="#buy" class="buy-card"><img src="images/wheatfield.png" alt="" class="card-size"></a>
+                        <a href="#buy" class="buy-card"><img src="images/farm.png" alt="" class="card-size"></a>
+                        <a href="#buy" class="buy-card"><img src="images/bakery.png" alt="" class="card-size"></a>
+                        <a href="#buy" class="buy-card"><img src="images/cafe.png" alt="" class="card-size"></a>
+                        <a href="#buy" class="buy-card"><img src="images/supermarket.png" alt="" class="card-size"></a>
+                        <a href="#buy" class="buy-card"><img src="images/Reserve.png" alt="" class="card-size"></a>
+                        <a class="buy-card"><img src="images/stadium.png" alt="" class="card-size" style="filter: grayscale(100%);"></a>
+                        <a class="buy-card"><img src="images/telecentre.png" alt="" class="card-size" style="filter: grayscale(100%);"></a>
+                        <a class="buy-card"><img src="images/business centre.png" alt="" class="card-size" style="filter: grayscale(100%);"></a>
+                        <a class="buy-card"><img src="images/Dairy.png" alt="" class="card-size" style="filter: grayscale(100%);"></a>
+                        <a href="#buy" class="buy-card"><img src="images/furniture factory.png" alt="" class="card-size"></a>
+                        <a class="buy-card"><img src="images/mine.png" alt="" class="card-size" style="filter: grayscale(100%);"></a>
+                        <a href="#buy" class="buy-card"><img src="images/eatery.png" alt="" class="card-size"></a>
+                        <a href="#buy" class="buy-card"><img src="images/apple orchard.png" alt="" class="card-size"></a>
+                        <a href="#buy" class="buy-card"><img src="images/vegetable market.png" alt="" class="card-size"></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="buy" class="popup">
+        <a href="#store" class="popup-area"></a>
+        <div class="popup_body">
+            <div class="popup_content-buy">
+                <a href="#store" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="31" cy="31" r="27" fill="#5CC5E1" stroke="#A9ECFF" stroke-width="8"/>
+                    <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#A9ECFF" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#A9ECFF" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                    </a>
+                <div class="popup-head">
+                    <h1>вы уверены, что хотите<br> купить это предприятие?</h1>
+                </div>
+                <div class="popup-inside">
+                    <img src="images/wheatfield.png" alt="" class="card-size-store">
+                    
+                    <div class="buy-buttons">
+                        <a href="#store" class="game-button hov">Нет</a>
+                        <a href="#" class="game-button hov">Да</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
