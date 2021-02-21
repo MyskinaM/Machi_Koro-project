@@ -431,6 +431,7 @@ a.bookmark:active {
 .group label {
     text-align: center;
     display: block;
+    text-align: inherit;
 }
 
 .group {
