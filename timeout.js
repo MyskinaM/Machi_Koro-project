@@ -129,12 +129,13 @@ function getResult(p){
     else
             document.getElementById("dice1").style.display = "none";
     
+    //Обработка достопримечательностей
     i=0;
     var land;
     var land_id;
-    while (i < res1.length)
+    while (i < res1.length) //проход по всем картам всех игроков
     {   //console.log(res1[i].Предприятие);
-        if (res1[i].Предприятие.substr(0,7) === "ДОСТОПР")
+        if (res1[i].Предприятие.substr(0,7) === "ДОСТОПР" && res1[i].nickname === localStorage.getItem('login'))
         {
             land = res1[i].id_card; //запомнили id достопримечательности, которая есть у игрока
             land_id = land + "land.png"; // название картинки построенной достопримечательности

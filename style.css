@@ -1129,25 +1129,34 @@ a.game-button:active {
 
 .ent {
 	cursor: pointer;
-    width: 218px;
+    width: 228px;
+    margin-top: 31px;
     height: 335px;
     position: relative;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    transition: all 0.4s ease 0s;
-    z-index: 1;
-	margin-top: 29px;
+    background-position: center;
+    transition: all 0.4s;
 }
 
-/* .ent:hover {
+.ent:not(:last-child) {
+	margin-right: 10px;
+}
+
+.store-card {
+	transition: all 0.4s ease-out;
+	cursor: pointer;
+  }
+
+  .store-card:not(:last-child) {
+	margin-right: 8px;
+  }
+  
+  .store-card:hover {
 	transform: scale(1.2);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	z-index: 2;
-} */
-
-.ent:not(:last-child) {
-	margin-right: 23px;
-}
+  }
 
 .enterprices {
 	display: flex;
