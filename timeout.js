@@ -36,6 +36,7 @@ gameState()
 function getResult(p) {
 	var res1 = JSON.parse(p.target.response)
 	console.log(res1)
+	//Состояние игры
 	if (res1[0].nickname_AcPl != localStorage.getItem('login')) {
 		//проверяет, является ли игрок неактивным
 		//если да, то...
@@ -55,6 +56,7 @@ function getResult(p) {
 		//если вы активный игрок, то у вас тень появится
 		document.getElementById('you').style.boxShadow =
 			'rgb(32 33 36 / 60%) 6px 7px'
+			//отображение кнопок действий
 		if (res1[0].can_roll_dice === 1) {
 			document.getElementById('roll').style.display = 'block' //прячет кнопку броска
 			document.getElementById('store').style.display = 'none' //показывает кнопку рынок
@@ -136,12 +138,18 @@ function getResult(p) {
 		//проход по всем картам всех игроков
 		//console.log(res1[i].Предприятие);
 		if (
-			res1[i].Предприятие.substr(0, 7) === 'ДОСТОПР' &&
-			res1[i].nickname === localStorage.getItem('login')
-		) {
+			res1[i].Предприятие.substr(0, 7) === 'ДОСТОПР'			
+		) { //достопримечательность построена
+			//надо отобразить, что она построена
 			land = res1[i].id_card //запомнили id достопримечательности, которая есть у игрока
 			land_id = land + 'land.png' // название картинки построенной достопримечательности
-			document.getElementById('land' + land).src = 'images/' + land_id //по идее, заменяю картинку
+			if (res1[i].nickname === localStorage.getItem('login'))
+				document.getElementById('myland' + land).src = 'images/' + land_id //заменяю картинку
+			else
+				document.getElementById('othland' + land).src = 'images/' + land_id //заменяю картинку
+			//а если построенная достопримечательность - это вокзал, то надо чтобы при броске кубика, прежде чем был совершен бросок, игрока спросили, сколько кубиков он хочет бросить
+			if (land === 1) //проверяет по id вокзал ли это
+				document.getElementById('roll').href = '#how_many_dices'; //меняю
 		}
 		i++
 	}

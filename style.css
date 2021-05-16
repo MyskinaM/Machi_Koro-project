@@ -224,6 +224,10 @@ a.button377 {
 	padding: 38px 0px;
 }
 
+.fs68 {
+	font-size: 68px !important; 
+}
+
 input::placeholder {
 	color: #006c89;
 }
@@ -481,6 +485,10 @@ a.bookmark:active {
 .group a {
 	margin-top: 21px;
 	display: block;
+}
+
+.oth_pl_cards {
+	z-index: 2;
 }
 
 .oth-games {
@@ -991,7 +999,7 @@ a.game-button:active {
 	position: fixed;
 	font-size: 30px;
 	padding: 31px 0;
-	z-index: 100;
+	
 }
 
 .your-turn {
@@ -1008,6 +1016,7 @@ a.game-button:active {
 	text-align: end;
 	padding-right: 30px;
 	box-shadow: 6px 7px rgb(32 33 36 / 60%);
+	z-index: 1;
 }
 
 /* Меню */
@@ -1160,7 +1169,7 @@ a.game-button:active {
 
 .store-card.disabled {
 	pointer-events: none;
-	filter: grayscale(50%);
+	filter: grayscale(100%);
 }
 
 .enterprices {
