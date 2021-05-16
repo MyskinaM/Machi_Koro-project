@@ -1,9 +1,9 @@
 // обновление и установка состояния игры
 
 function gameState() {
-	document.getElementById('your_name').innerHTML =
-		localStorage.getItem('login')
-	if (localStorage.getItem('login') === 'Player1') {
+	const currentPlayerName = localStorage.getItem('login')
+	document.getElementById('your_name').innerHTML = currentPlayerName
+	if (currentPlayerName === 'Player1') {
 		document.getElementById('oth_name').innerHTML = 'Player5'
 		document.getElementById('oth_name2').innerHTML = 'Player5'
 		document.getElementById('you_src').src = 'images/ava.png'
@@ -21,7 +21,7 @@ function gameState() {
 	var fd = new FormData()
 	fd.set('db', '2375') //указываем бд
 	fd.set('pname', 'game_state') //указываем процедуру
-	fd.set('p1', localStorage.getItem('login'))
+	fd.set('p1', currentPlayerName)
 	fd.set('p2', localStorage.getItem('pas'))
 	fd.set('p3', localStorage.getItem('game')) //id игры
 	fd.set('format', 'rows')
@@ -37,7 +37,7 @@ function getResult(p) {
 	var res1 = JSON.parse(p.target.response)
 	console.log(res1)
 	//Состояние игры
-	if (res1[0].nickname_AcPl != localStorage.getItem('login')) {
+	if (res1[0].nickname_AcPl != currentPlayerName) {
 		//проверяет, является ли игрок неактивным
 		//если да, то...
 		document.querySelector('.part-turn').style.display = 'block' //отображение плашки состояния игры
@@ -52,11 +52,11 @@ function getResult(p) {
 				'Игрок ' + res1[0].nickname_AcPl + ' строит' //находит первый элемент с заданным классом
 	}
 
-	if (res1[0].nickname_AcPl === localStorage.getItem('login')) {
+	if (res1[0].nickname_AcPl === currentPlayerName) {
 		//если вы активный игрок, то у вас тень появится
 		document.getElementById('you').style.boxShadow =
 			'rgb(32 33 36 / 60%) 6px 7px'
-			//отображение кнопок действий
+		//отображение кнопок действий
 		if (res1[0].can_roll_dice === 1) {
 			document.getElementById('roll').style.display = 'block' //прячет кнопку броска
 			document.getElementById('store').style.display = 'none' //показывает кнопку рынок
@@ -74,11 +74,11 @@ function getResult(p) {
 	}
 
 	var i = 0
-	while (res1[i].nickname != localStorage.getItem('login')) i++
+	while (res1[i].nickname != currentPlayerName) i++
 	document.getElementById('your_coins').innerText = res1[i].coins //находит первый элемент с заданным классом
 	document.getElementById('yourr_coins').innerText = res1[i].coins //находит первый элемент с заданным классом
 	var j = 0
-	while (res1[j].nickname == localStorage.getItem('login')) j++
+	while (res1[j].nickname == currentPlayerName) j++
 	document.getElementById('oth_coins').innerText = res1[j].coins //находит первый элемент с заданным классом
 
 	if (res1[0].dice_1 != 0) {
@@ -134,22 +134,23 @@ function getResult(p) {
 	i = 0
 	var land
 	var land_id
+	let hazVokzal = false
 	while (i < res1.length) {
 		//проход по всем картам всех игроков
 		//console.log(res1[i].Предприятие);
-		if (
-			res1[i].Предприятие.substr(0, 7) === 'ДОСТОПР'			
-		) { //достопримечательность построена
+		if (res1[i].Предприятие.substr(0, 7) === 'ДОСТОПР') {
+			//достопримечательность построена
 			//надо отобразить, что она построена
 			land = res1[i].id_card //запомнили id достопримечательности, которая есть у игрока
 			land_id = land + 'land.png' // название картинки построенной достопримечательности
-			if (res1[i].nickname === localStorage.getItem('login'))
-				document.getElementById('myland' + land).src = 'images/' + land_id //заменяю картинку
-			else
-				document.getElementById('othland' + land).src = 'images/' + land_id //заменяю картинку
+			if (res1[i].nickname === currentPlayerName) {
+				document.getElementById('myland' + land).src =
+					'images/' + land_id //заменяю картинку
+				hazVokzal = true
+			} else
+				document.getElementById('othland' + land).src =
+					'images/' + land_id //заменяю картинку
 			//а если построенная достопримечательность - это вокзал, то надо чтобы при броске кубика, прежде чем был совершен бросок, игрока спросили, сколько кубиков он хочет бросить
-			if (land === 1) //проверяет по id вокзал ли это
-				document.getElementById('roll').href = '#how_many_dices'; //меняю
 		}
 		i++
 	}
@@ -160,7 +161,7 @@ function getResult(p) {
 	i = 0
 	while (i < res1.length) {
 		if (res1[i].Предприятие.substr(0, 7) != 'ДОСТОПР') {
-			if (res1[i].nickname === localStorage.getItem('login')) {
+			if (res1[i].nickname === currentPlayerName) {
 				//console.log(res1[i].Предприятие);
 				your_crds +=
 					'<div class="ent"><img class="buy-card card-size" src="images/' +
@@ -184,7 +185,7 @@ function getResult(p) {
 	document.getElementById('enterprices_oth').innerHTML = oth_crds
 
 	var k = 0
-	while (res1[k].nickname != localStorage.getItem('login'))
+	while (res1[k].nickname != currentPlayerName)
 		//ищем строку с данными по активному игроку
 		k++
 	var pl_coins = res1[k].coins // записали, сколько денег у активного игрока
@@ -213,4 +214,11 @@ function getResult(p) {
 	//     }
 	//     k++;
 	// }
+
+	document.addEventListener('DOMContentLoaded', e => {
+		const rollBtn = document.getElementById('roll')
+		rollBtn.addEventListener('click', () => {
+			hasVokzal ? (location.href = '/game#how_many_dices') : roll()
+		})
+	})
 }
