@@ -1,1107 +1,1194 @@
 @font-face {
-    font-family: AnimeAcev02; /* Гарнитура шрифта */
-    src: url(fonts/AnmaRv02.ttf); /* Путь к файлу со шрифтом */
-    
+	font-family: AnimeAcev02; /* Гарнитура шрифта */
+	src: url(fonts/AnmaRv02.ttf); /* Путь к файлу со шрифтом */
 }
 
 @font-face {
-    font-family: PFCosmonutPro; /* Гарнитура шрифта */
-    src: url(fonts/PFCosmonutPro.ttf); /* Путь к файлу со шрифтом */
+	font-family: PFCosmonutPro; /* Гарнитура шрифта */
+	src: url(fonts/PFCosmonutPro.ttf); /* Путь к файлу со шрифтом */
 }
 
 body {
-    background: #b8e4f0;
-    margin: 0;
-    color: white;
-    font-family: AnimeAcev02, fantasy;
+	background: #b8e4f0;
+	margin: 0;
+	color: white;
+	font-family: AnimeAcev02, fantasy;
 }
 
 p {
-    font-size: 23px;
+	font-size: 23px;
 }
 
 .wrapper {
-    width: 1170px;
-    margin: 0 auto;
+	width: 1170px;
+	margin: 0 auto;
 }
 
 .main-menu-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 873px;
-    height: 937px;
-    background-color: #009DC8;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 873px;
+	height: 937px;
+	background-color: #009dc8;
 }
 
 .win_back {
-    width: 1170px;
-    height: 937px;
-    background-color: #009DC8;
+	width: 1170px;
+	height: 937px;
+	background-color: #009dc8;
 }
 
 .win_back h1 {
-    margin: 0;
-    text-align: center;
-    padding-top: 71px;
-    padding-bottom: 27px;
+	margin: 0;
+	text-align: center;
+	padding-top: 71px;
+	padding-bottom: 27px;
 }
 
 .win_content {
-    width: 972px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    
+	width: 972px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
 }
 
 .statistics {
-    width: 410px;
-    height: 117px;
-    padding: 40px 32px;
-    background-color: #0092ba;
-    margin-top: 20px;
-    border-radius: 10px;
-    font-size: 23px;
+	width: 410px;
+	height: 117px;
+	padding: 40px 32px;
+	background-color: #0092ba;
+	margin-top: 20px;
+	border-radius: 10px;
+	font-size: 23px;
 }
 
 .figure {
-    font-size: 37px;
-    margin-top: 50px;
+	font-size: 37px;
+	margin-top: 50px;
 }
 
 /* avatar */
 
 .avatar {
-    width: fit-content;
-    position: relative;
-    margin-top: 37px;
-    margin-left: 32px;
+	width: fit-content;
+	position: relative;
+	margin-top: 37px;
+	margin-left: 32px;
 }
 
 .avatar-container {
-    cursor: pointer;
-    border-radius: 50%;
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 10px;
-    border: 3px solid #009DC8;
+	cursor: pointer;
+	border-radius: 50%;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 10px;
+	border: 3px solid #009dc8;
 }
 
 .avainmenu {
-    border-radius: 50%;
-    border: 3px solid #009DC8;
-    width: 101px;
-    height: 101px;
+	border-radius: 50%;
+	border: 3px solid #009dc8;
+	width: 101px;
+	height: 101px;
 }
 
 .status {
-    position: absolute;
-    margin-top: 71px;
-    margin-left: 78px;
+	position: absolute;
+	margin-top: 71px;
+	margin-left: 78px;
 }
 
 .nickname {
-    padding: 57px;
-    width: 700px;
-    font-size: 23px;
+	padding: 57px;
+	width: 700px;
+	font-size: 23px;
 }
 
 .avatar-image {
-    border-radius: 50%;
-    height: 100%;
-    width: auto;
+	border-radius: 50%;
+	height: 100%;
+	width: auto;
 }
 
 .avatar-size {
-    width: 126px;
-    height: 126px;
+	width: 126px;
+	height: 126px;
 }
 
 .avatar-size-lobby {
-    width: 63px;
-    height: 63px;
+	width: 63px;
+	height: 63px;
 }
 
 .edit-container {
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-    background-color: rgba(32, 33, 36, 0.6);
-    bottom:0;
-    height: 33%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    text-align: center;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+	background-color: rgba(32, 33, 36, 0.6);
+	bottom: 0;
+	height: 33%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
 }
 
 .edit-container svg {
-    width: 30px;
-    height: 30px;
-    margin-top: 7px;
+	width: 30px;
+	height: 30px;
+	margin-top: 7px;
 }
 
 .avatar-container:hover .edit-container {
-    opacity: 1;
+	opacity: 1;
 }
 
 h1 {
-    font-weight: 300;
-    font-size: 37px;
+	font-weight: 300;
+	font-size: 37px;
 }
 
 .logo {
-    margin-bottom: 67px;
+	margin-bottom: 67px;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+	text-decoration: none;
+	color: white;
 }
 
 /* buttons */
 
-a.button674,  a.button278, a.button377, a.button-changepas, a.button178, a.button575 {
-    display: inline-block;
-    font-family: AnimeAcev02, fantasy;
-    
-    border-radius: 10px;
-    text-align: center;
-    background: #0086AB;
-  }
+a.button674,
+a.button278,
+a.button377,
+a.button-changepas,
+a.button178,
+a.button575 {
+	display: inline-block;
+	font-family: AnimeAcev02, fantasy;
 
-  a.button575 {
-      display: block;
-      width: 575px;
-      padding: 42px 0px;
-      margin: 0 auto;
-      font-size: 23px;
-      margin-bottom: 41px;
-  }
+	border-radius: 10px;
+	text-align: center;
+	background: #0086ab;
+}
 
-a.button-changepas
-{
-    width: 277px;
-    font-size: 23px;
-    padding: 8px 0px;
-    position: absolute;
-    margin-top: 121px;
-    margin-left: 197px;
+a.button575 {
+	display: block;
+	width: 575px;
+	padding: 42px 0px;
+	margin: 0 auto;
+	font-size: 23px;
+	margin-bottom: 41px;
+}
+
+a.button-changepas {
+	width: 277px;
+	font-size: 23px;
+	padding: 8px 0px;
+	position: absolute;
+	margin-top: 121px;
+	margin-left: 197px;
 }
 
 a.button178 {
-    position: fixed;
+	position: fixed;
 
-    width: 178px;
-    font-size: 21px;
-    padding-top: 17px;
-    padding-bottom: 10px;
-    top: 0;
-    margin-top: -8px;
-    margin-left: 992px;
+	width: 178px;
+	font-size: 21px;
+	padding-top: 17px;
+	padding-bottom: 10px;
+	top: 0;
+	margin-top: -8px;
+	margin-left: 992px;
 }
 
 a.button674 {
-    width: 674px;
-    font-size: 32px;
-    padding: 55px 0px;
-    margin-bottom: 53px;
-  }
-
-a.button278 {
-    width: 278px;
-    font-size: 23px;
-    padding: 41px 0px;
-  }
-
-a.button377 {
-    width: 377px;
-    font-size: 23px;
-    padding: 38px 0px;
-  }
-
-  input::placeholder { color:#006C89; } 
-
-  .hov {
-    cursor: pointer;
-  }
-
-a.button674:hover, a.button278:hover, a.button377:hover, a.fyp:hover, a.button-changepas:hover, .button-delete:hover, .button-play:hover, .hov:hover {
-    transform: scale(1.05);
-  }
-
- 
-
-a.button674:active, a.button278:active, a.button377:active, a.button-changepas:active {
-    background: #006C89;
-  }
-
-  a.button-delete:active {
-    background: #D77D7D;
-  }
-
-  a.button-play:active {
-    background: #55B7D1;
-  }
-
-.bookmark {
-    background-color: #0086AB;
-    border-radius: 10px;
-    margin-bottom: 27px;
-    margin-right: 99px;
-    padding-left: 54px;
-    margin-left: -10px;
-    padding-top: 15px;
-    padding-right: 40px;
-    padding-bottom: 10px;
+	width: 674px;
+	font-size: 32px;
+	padding: 55px 0px;
+	margin-bottom: 53px;
 }
 
+a.button278 {
+	width: 278px;
+	font-size: 23px;
+	padding: 41px 0px;
+}
+
+a.button377 {
+	width: 377px;
+	font-size: 23px;
+	padding: 38px 0px;
+}
+
+input::placeholder {
+	color: #006c89;
+}
+
+.hov {
+	cursor: pointer;
+}
+
+a.button674:hover,
+a.button278:hover,
+a.button377:hover,
+a.fyp:hover,
+a.button-changepas:hover,
+.button-delete:hover,
+.button-play:hover,
+.hov:hover {
+	transform: scale(1.05);
+}
+
+a.button674:active,
+a.button278:active,
+a.button377:active,
+a.button-changepas:active {
+	background: #006c89;
+}
+
+a.button-delete:active {
+	background: #d77d7d;
+}
+
+a.button-play:active {
+	background: #55b7d1;
+}
+
+.bookmark {
+	background-color: #0086ab;
+	border-radius: 10px;
+	margin-bottom: 27px;
+	margin-right: 99px;
+	padding-left: 54px;
+	margin-left: -10px;
+	padding-top: 15px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+}
 
 a.bookmark:hover {
-    transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 a.bookmark:active {
-    transform: scale(1);
-    background: #006C89;
+	transform: scale(1);
+	background: #006c89;
 }
 
 .main-menu {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .main-menu-right {
-    margin-top: 74px;
-    display: flex;
-    flex-direction: column;
+	margin-top: 74px;
+	display: flex;
+	flex-direction: column;
 }
 
 /* login */
 
-.login, .forg-yo-pas, .registration, .check-email, .popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.2s ease 0s;
+.login,
+.forg-yo-pas,
+.registration,
+.check-email,
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s ease 0s;
 }
 
-.login:target,  .forg-yo-pas:target, .registration:target, .check-email:target, .popup:target {
-    opacity: 1;
-    visibility: visible;
+.login:target,
+.forg-yo-pas:target,
+.registration:target,
+.check-email:target,
+.popup:target {
+	opacity: 1;
+	visibility: visible;
 }
 
-.login:target .login_content, .forg-yo-pas:target .forg-yo-pas_content,  .registration:target .registration_content, .check-email:target .check-email_content, .check-email:target .menu_content{
-    transform: perspective(600px) translate(0px,0%) rotateX(0deg);
-    opacity: 1;
+.login:target .login_content,
+.forg-yo-pas:target .forg-yo-pas_content,
+.registration:target .registration_content,
+.check-email:target .check-email_content,
+.check-email:target .menu_content {
+	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+	opacity: 1;
 }
 
-.popup:target .popup_content, .popup:target .popup_content-menu, .popup:target .popup_content-store, .popup:target .popup_content-buy {
-    transform: scale(1);
-    opacity: 1;
+.popup:target .popup_content,
+.popup:target .popup_content-menu,
+.popup:target .popup_content-store,
+.popup:target .popup_content-buy {
+	transform: scale(1);
+	opacity: 1;
 }
 
-.login_area, .forg-yo-pas_area, .registration_area, .registration_check-email, .check-email_area, .popup-area {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left:0;
+.login_area,
+.forg-yo-pas_area,
+.registration_area,
+.registration_check-email,
+.check-email_area,
+.popup-area {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 }
 
-.login_body,  .forg-yo-pas_body, .registration_body, .check-email_body, .popup_body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.login_body,
+.forg-yo-pas_body,
+.registration_body,
+.check-email_body,
+.popup_body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .check-email_body {
-    flex-direction: column;
-    text-align: center;
+	flex-direction: column;
+	text-align: center;
 }
 
-.login_content, .forg-yo-pas_content, .registration_content, .check-email_content {
-    border-radius: 27px;
-    background-color: #009DC8;
-    border: 14px solid #5CC5E1;
-    max-width: 1170px;
-    padding: 80px 90px 70px 90px;
-    position: relative;
-    transition: all 0.2s ease 0s;
-    opacity: 0;
-    transform: perspective(600px) translate(0px,-100%) rotateX(45deg);
+.login_content,
+.forg-yo-pas_content,
+.registration_content,
+.check-email_content {
+	border-radius: 27px;
+	background-color: #009dc8;
+	border: 14px solid #5cc5e1;
+	max-width: 1170px;
+	padding: 80px 90px 70px 90px;
+	position: relative;
+	transition: all 0.2s ease 0s;
+	opacity: 0;
+	transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 }
 
 .popup_content {
-    border-radius: 27px;
-    width: 1170px;
-    position: relative;
-    transition: all 0.2s ease 0s;
-    opacity: 0;
-    transform: scale(.25);
+	border-radius: 27px;
+	width: 1170px;
+	position: relative;
+	transition: all 0.2s ease 0s;
+	opacity: 0;
+	transform: scale(0.25);
 }
 
 .popup_content-buy {
-    width: 575px;
+	width: 575px;
 }
 
 .popup_content-menu h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    margin-top: 57px;
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 57px;
 }
 
 .popup_content-menu {
-    border-radius: 27px;
-    background-color: #009DC8;
-    border: 14px solid #5CC5E1;
-    width: 774px;
-    height: 768px;
-    position: relative;
-    transition: all 0.2s ease 0s;
-    opacity: 0;
-    transform: scale(.25);
+	border-radius: 27px;
+	background-color: #009dc8;
+	border: 14px solid #5cc5e1;
+	width: 774px;
+	height: 768px;
+	position: relative;
+	transition: all 0.2s ease 0s;
+	opacity: 0;
+	transform: scale(0.25);
 }
 
 .popup_content-store {
-    /* border-radius: 27px;
+	/* border-radius: 27px;
     background-color: #5CC5E1;
     border: 9px solid #0086AB; */
-    width: 1170px;
-    height: 800px;
-    position: relative;
-    transition: all 0.2s ease 0s;
-    opacity: 0;
-    transform: scale(.25);
+	width: 1170px;
+	height: 800px;
+	position: relative;
+	transition: all 0.2s ease 0s;
+	opacity: 0;
+	transform: scale(0.25);
 }
 
 .popup_title {
-    font-size: 37px;
+	font-size: 37px;
 }
 
 .forg-yo-pas_content {
-    width: 797px;
+	width: 797px;
 }
 
 .registration_content {
-    width: 810px;
+	width: 810px;
 }
 
 .blocks {
-    display: flex;
-    justify-content: space-between;
-    font-size: 23px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 23px;
 }
 
-.hry { /* еще не регистрировались? */
-    padding-top: 26px;
-    margin-bottom: 32px;
+.hry {
+	/* еще не регистрировались? */
+	padding-top: 26px;
+	margin-bottom: 32px;
 }
 
 .fyp {
-    margin-bottom: 45px;
-    text-decoration: underline;
-    position: absolute;
+	margin-bottom: 45px;
+	text-decoration: underline;
+	position: absolute;
 }
 
 .check-email_text {
-    text-align: center;
-    font-size: 23px;
-    margin-bottom: 36px;
+	text-align: center;
+	font-size: 23px;
+	margin-bottom: 36px;
 }
 
 .login_title {
-    text-align: center;
-    font-size: 37px;
-    margin: 0px 0px 1em 0px;
+	text-align: center;
+	font-size: 37px;
+	margin: 0px 0px 1em 0px;
 }
 
 .groups {
-    margin-bottom: 27px;
+	margin-bottom: 27px;
 }
 
 .group label {
-    text-align: center;
-    display: block;
-    text-align: inherit;
+	text-align: center;
+	display: block;
+	text-align: inherit;
 }
 
 .group {
-    margin-bottom: 27px;
-    margin-right: 20px;
+	margin-bottom: 27px;
+	margin-right: 20px;
 }
 
 .group a {
-    margin-top: 21px;
-    display: block;
+	margin-top: 21px;
+	display: block;
 }
 
 .oth-games {
-    margin-left: 6px;
+	margin-left: 6px;
 }
 
 .login_body .buttons {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
-input, .no-input {
-    display: flex;
-    margin-top: 10px;
-    height: 21px;
-    
-    background-color: #5CC5E1;
-    padding: 22px 18px;
-    border: 0px solid #26BEFF;
-    color: white;
-    font-size: 25px;
-    font-family: PFCosmonutPro, fantasy;
+input,
+.no-input {
+	display: flex;
+	margin-top: 10px;
+	height: 21px;
+
+	background-color: #5cc5e1;
+	padding: 22px 18px;
+	border: 0px solid #26beff;
+	color: white;
+	font-size: 25px;
+	font-family: PFCosmonutPro, fantasy;
 }
 
 .checkbox {
-    position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-style: italic;
-    display: flex;
+	position: absolute;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-style: italic;
+	display: flex;
 }
 
 .registration input {
-    width: 359px;
+	width: 359px;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .login input {
-    width: 372px;
+	width: 372px;
 }
 
 .forg-yo-pas input {
-    width: 96%;
+	width: 96%;
 }
 
 .groups-fon {
-    width: 476px;
-    height: 230px;
-    background-color: #0092ba;
-    border-radius: 10px;
-    text-align: center;    
-    margin-bottom: 27px;
+	width: 476px;
+	height: 230px;
+	background-color: #0092ba;
+	border-radius: 10px;
+	text-align: center;
+	margin-bottom: 27px;
 }
 
 label {
-    font-size: 23px;
+	font-size: 23px;
 }
 
 /* forg-yo-pas */
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 14px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 14px;
 }
 
 /* продолжить игру */
 
 .game-slot {
-    width: 972px;
-    height: 105px;
-    background-color: #0092ba;
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-bottom: 33px;
+	width: 972px;
+	height: 105px;
+	background-color: #0092ba;
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-bottom: 33px;
 }
 
 .player-slot {
-    width: 575px;
-    height: 105px;
-    background-color: #0092ba;
-    border-radius: 10px;
-    margin-bottom: 33px;
+	width: 575px;
+	height: 105px;
+	background-color: #0092ba;
+	border-radius: 10px;
+	margin-bottom: 33px;
 }
 
 .game-slot_content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 21px 32px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 21px 32px;
 }
 
 .player-slot_content {
-    display: flex;
-    padding: 21px 32px;
-    align-items: center;
+	display: flex;
+	padding: 21px 32px;
+	align-items: center;
 }
 
 .slots {
-    margin-top: 49px;
+	margin-top: 49px;
 }
 
 .player-slots {
-    width: 972px;
-    margin: 0 auto;
-    margin-top: 49px;
+	width: 972px;
+	margin: 0 auto;
+	margin-top: 49px;
 }
 
-.game-name, .game-num {
-    font-size: 23px;
+.game-name,
+.game-num {
+	font-size: 23px;
+}
+
+.help {
+	position: relative;
+}
+
+.num {
+	position: absolute;
+	font-size: 32px;
+	bottom: 4%;
+	right: 10px;
+}
+
+.num2 {
+	position: absolute;
+	font-size: 32px;
 }
 
 .game-name {
-    width: 318px;
+	width: 318px;
 }
 
 .player-name {
-    font-size: 23px;
-    margin-left: 23px;
-    margin-bottom: 9px;
+	font-size: 23px;
+	margin-left: 23px;
+	margin-bottom: 9px;
 }
 
-.button-delete, .button-play {
-    border-radius: 32px;
-    width: 118px;
-    padding: 23px 0;
-    text-align: center;
+.button-delete,
+.button-play {
+	border-radius: 32px;
+	width: 118px;
+	padding: 23px 0;
+	text-align: center;
 }
 
 .button-delete {
-    background-color: #FF9999;
+	background-color: #ff9999;
 }
 
 .button-play {
-    background-color: #5CC5E1;
+	background-color: #5cc5e1;
 }
 
 /* Лобби */
 
 .match-type {
-    position: absolute;
-    margin-left: 694px;
+	position: absolute;
+	margin-left: 694px;
 }
 
 .match-type-container {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .match-type-txt {
-    margin-left: 14px;
-    font-size: 16px;
+	margin-left: 14px;
+	font-size: 16px;
 }
 
 .player-slots .avatar-container {
-    cursor: auto;
+	cursor: auto;
 }
 
 /* Создание игры */
 
 .content972 {
-    width: 972px;
-    margin: 0 auto;
-    margin-top: 49px;
+	width: 972px;
+	margin: 0 auto;
+	margin-top: 49px;
 }
 
 .content972 input {
-    width: 377px;
+	width: 377px;
 }
 
 .field {
-    width: 377px;
+	width: 377px;
 }
 
 .flex {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 figcaption {
-    text-align: center;
-    margin-top: 13px;
-    width: 150px;
+	text-align: center;
+	margin-top: 13px;
+	width: 150px;
 }
 
 .content972 form {
-    margin-bottom: 49px;
+	margin-bottom: 49px;
 }
 
 .square {
-    width: 149px;
-    height: 150px;
-    background-color: #0092ba;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content:center;
+	width: 149px;
+	height: 150px;
+	background-color: #0092ba;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 figure {
-    margin: 0;
+	margin: 0;
 }
 
-.content972 input, .content972 .no-input, .square, .match-type_crtgam {
-    margin-top: 20px;
+.content972 input,
+.content972 .no-input,
+.square,
+.match-type_crtgam {
+	margin-top: 20px;
 }
 
 .players {
-    display: flex;
+	display: flex;
 }
 
 .player {
-    margin-right: 20px;
+	margin-right: 20px;
 
-    float: left; /*Задаем обтекание*/
-    
+	float: left; /*Задаем обтекание*/
 }
 
 .delete {
-    position: absolute;
-    margin-left: 114px;
+	position: absolute;
+	margin-left: 114px;
 }
 
 .match-type_crtgam p {
-    margin-top: 0;
-    margin-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .match-type_crtgam {
-    display: flex;
+	display: flex;
 }
 
 .marr {
-    margin-right: 27px;
+	margin-right: 27px;
 }
 
 /* Игра */
 
 .game-players {
-    margin-top: 25px;
+	margin-top: 25px;
 }
 
 .player {
-    border-radius: 10px;
-    background-color: #009DC8;
-    width: 179px;
+	border-radius: 10px;
+	background-color: #009dc8;
+	width: 179px;
 }
 
 .you {
-    height: 123px;
-    box-shadow: 6px 7px rgb(32 33 36 / 60%);
-    margin-bottom: 53px;
+	height: 123px;
+	/* box-shadow: 6px 7px rgb(32 33 36 / 60%); */
+	margin-bottom: 53px;
 }
 
 .other {
-    height: 99px;
-    box-shadow: 0px 24px #5CC5E1;
+	height: 99px;
+	box-shadow: 0px 24px #5cc5e1;
 }
 
 .avatar-game {
-    width: fit-content;
-    position: absolute;
+	width: fit-content;
+	position: absolute;
 }
 
 .ava-g-you {
-    margin-top: 18px;
-    margin-left: 14px;
+	margin-top: 18px;
+	margin-left: 14px;
 }
 
 .ava-g-other {
-    margin-top: 11px;
-    margin-left: 22px;
+	margin-top: 11px;
+	margin-left: 22px;
 }
 
 .avatar-container-game {
-    border-radius: 50%;
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
+	border-radius: 50%;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
 }
 
 .avatar-size-game-you {
-    width: 52px;
-    height: 52px;
+	width: 52px;
+	height: 52px;
 }
 
 .avatar-size-game-other {
-    width: 40px;
-    height: 40px;
+	width: 40px;
+	height: 40px;
 }
 
 .player-name-game {
-    font-size: 21px;
+	font-size: 21px;
 }
 
 .png-you {
-    margin-top: 16px;
-    margin-left: 14px;
+	margin-top: 16px;
+	margin-left: 14px;
 }
 
 .elements .png-oth {
-    margin-top: 16px;
-    margin-left: 17px;
+	margin-top: 16px;
+	margin-left: 17px;
 }
 
 .gold-you {
-    margin-top: 18px;
-    margin-left: 118px;
-    position: absolute;
+	margin-top: 18px;
+	margin-left: 118px;
+	position: absolute;
 }
 
 .elements .gold-oth {
-    margin-top: 11px;
-    margin-left: 122px;
-    position: absolute;
+	margin-top: 11px;
+	margin-left: 122px;
+	position: absolute;
 }
 
 .popup_content-store .gold-oth {
-    padding-left: 100px;
+	padding-left: 100px;
 }
 
 .popup_content-store .gold-image-oth {
-    width: 62px;
-    height: 62px;
+	width: 62px;
+	height: 62px;
 }
 
 .popup_content-store .gc-oth {
-    margin-left: 23px;
-    margin-top: 18px;
+	margin-left: 23px;
+	margin-top: 18px;
 }
 
 .gold-image-you {
-    width: 45px;
-    height: 45px;
+	width: 45px;
+	height: 45px;
 }
 
 .gold-image-oth {
-    width: 41px;
-    height: 41px;
+	width: 41px;
+	height: 41px;
 }
 
 .gold-count {
-    position: absolute;
-    font-size: 23px;
-    
+	position: absolute;
+	font-size: 24px;
+}
+
+.gc-store {
+	margin-left: 15px;
+	margin-top: 14px;
 }
 
 .gc-you {
-    margin-left: 14px;
-    margin-top: 9px;
+	margin-left: 9px;
+	margin-top: 9px;
 }
 
 .gc-oth {
-    margin-left: 13px;
-    margin-top: 8px;
+	margin-left: 9px;
+	margin-top: 8px;
 }
 
 .open-oth-table:hover {
-    height: 26px;
-  }
+	height: 26px;
+}
 
 .open-oth-table {
-    width: 163px;
-    height: 16px;
-    background-color: #A9ECFF;
-    position: absolute;
-    margin-top: 60px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 8px solid #5CC5E1;
+	width: 163px;
+	height: 16px;
+	background-color: #a9ecff;
+	position: absolute;
+	margin-top: 60px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: 8px solid #5cc5e1;
 }
 
 /* Карты на столе */
 
 .cards {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 972px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 972px;
 }
 
 .card-size {
-    width: 228px;
-    height: 355px;
-    margin-right: 20px;
-    display: block;
-    float: left;
+	width: 228px;
+	height: 355px;
+	margin-right: 20px;
+	display: block;
+	float: left;
 }
 
 .stopfloat {
-    clear: both;
+	clear: both;
 }
 
 /* Окошко с кубиком(-ами) */
 
 .cup {
-    width: 166px;
-    height: 166px;
-    border: 8px solid #0086AB;  
-    
-    display: flex; /* Это надо чтобы кубики нормально отображались */
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 176px;
-    background-color: #5CC5E1;
+	width: 166px;
+	height: 166px;
+	border: 8px solid #0086ab;
+
+	display: flex; /* Это надо чтобы кубики нормально отображались */
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-top: 176px;
+	background-color: #5cc5e1;
 }
 
-.dice1, .dice2 {
-    width: 65px;
-    height: 65px;
-    background-color:#0086AB;
-    border-radius: 14px;
+.dice1,
+.dice2 {
+	width: 65px;
+	height: 65px;
+	background-color: #0086ab;
+	border-radius: 14px;
 }
 
 .six {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .dote {
-    
-    height: 13px;
-    width: 13px;
-    background-color: white;
-    border-radius: 50%;
-    margin-bottom: 3px;
+	height: 13px;
+	width: 13px;
+	background-color: white;
+	border-radius: 50%;
+	margin-bottom: 3px;
 }
 
 /* Окошко с кнопками под кубиками */
 
-.game-buttons, .cup {
-    margin-left: 992px;
-    position: fixed;
-    
-    margin-top: 176px;
-    
-    border-radius: 10px;
+.game-buttons,
+.cup {
+	margin-left: 992px;
+	position: fixed;
+
+	margin-top: 176px;
+
+	border-radius: 10px;
 }
 
 .game-buttons {
-    width: 166px;
-    text-align: center;
-    font-size: 21px;
-    margin-top: 377px;
+	width: 166px;
+	text-align: center;
+	font-size: 21px;
+	margin-top: 377px;
 }
 
 a.game-button {
-    display: block;
+	display: block;
 }
 
 .game-button {
-    text-align: center;
-    width: 166px;
-    padding: 10px 0;
-    border: 8px solid #A9ECFF; 
-    border-radius: 51px;
-    background-color: #5CC5E1;
-    box-shadow: 6px 7px rgb(32 33 36 / 60%);
-    margin-bottom: 12px;
+	text-align: center;
+	width: 166px;
+	padding: 10px 0;
+	border: 8px solid #a9ecff;
+	border-radius: 51px;
+	background-color: #5cc5e1;
+	box-shadow: 6px 7px rgb(32 33 36 / 60%);
+	margin-bottom: 12px;
 }
 
 a.game-button:active {
-    transform: scale(1);
-    background: #009DC8;
-    box-shadow: 0px 0px #5CC5E1;
-    transform: translateY(10px);
+	transform: scale(1);
+	background: #009dc8;
+	box-shadow: 0px 0px #5cc5e1;
+	transform: translateY(10px);
 }
 
 /* Окошко "Ваш ход" */
 
-.your-turn, .part-turn {
-    background: #5CC5E1;
-    border: 7px solid #0086AB;
-    position: fixed;
-    font-size: 40px;
-    padding: 31px 0;
-    z-index: 100;
-    
+.your-turn,
+.part-turn {
+	background: #5cc5e1;
+	border: 7px solid #0086ab;
+	position: fixed;
+	font-size: 30px;
+	padding: 31px 0;
+	z-index: 100;
 }
 
 .your-turn {
-    width: 100%;
-    text-align: center;
-    top: 42%;
+	width: 100%;
+	text-align: center;
+	top: 42%;
 }
 
 .part-turn {
-    width: 704px;
-    top: 70%;
-    margin-left: -10px;
-    border-radius: 10px;
-    text-align: end;
-    padding-right: 30px;
-    box-shadow: 6px 7px rgb(32 33 36 / 60%);
+	width: 704px;
+	top: 70%;
+	margin-left: -10px;
+	border-radius: 10px;
+	text-align: end;
+	padding-right: 30px;
+	box-shadow: 6px 7px rgb(32 33 36 / 60%);
 }
 
-
 /* Меню */
-
-
-
-
 
 /* Карты другого игрока */
 
 .popup-head {
-    display:table;
-    width: 100%;
-    height: 97px;
-    background: #009DC8;
-    border-radius: 10px;
+	display: table;
+	width: 100%;
+	height: 97px;
+	background: #009dc8;
+	border-radius: 10px;
 }
 
 .popup-head h1 {
-    display:table-cell!important;
-    vertical-align:middle;
-    text-align: right;
-    padding-right: 115px;
+	display: table-cell !important;
+	vertical-align: middle;
+	text-align: right;
+	padding-right: 115px;
 }
 
 .popup-title {
-    display: inline-block;
-    height: 53px;
-    font-size: 37px;
-    text-align: center;    
+	display: inline-block;
+	height: 53px;
+	font-size: 37px;
+	text-align: center;
 }
 
 .popup-inside {
-    background: #A9ECFF;
-    border: 8px solid #5CC5E1;
-    width: 100%;
-    height: 665px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    overflow: auto;
+	background: #a9ecff;
+	border: 8px solid #5cc5e1;
+	width: 100%;
+	height: 665px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	overflow: auto;
 }
 
 .popup-inside .cards {
-    margin: 0 auto;
-    margin-top: 35px;
+	margin: 0 auto;
+	margin-top: 35px;
 }
 
 .popup_close {
-    position: absolute;
-    right: -19px;
-    top: -19px;
+	position: absolute;
+	right: -19px;
+	top: -19px;
 }
 
 .popup-head .avatar-size-game-other {
-    width: 62px;
-    height: 62px;
+	width: 62px;
+	height: 62px;
 }
 
 .popup-head .avatar-container-game {
-    border-radius: 50%;
-    overflow: hidden;
-    display:table-cell!important;
-    vertical-align:middle;
+	border-radius: 50%;
+	overflow: hidden;
+	display: table-cell !important;
+	vertical-align: middle;
 }
 
 .popup-head .avatar-image {
-    height: 100%;
-    margin-left: 100px;
+	height: 100%;
+	margin-left: 100px;
 }
 
 .popup-head .png-oth {
-    padding-left: 17px;
-    width: 122px;
-    display:table-cell!important;
-    vertical-align:middle;
+	padding-left: 17px;
+	width: 122px;
+	display: table-cell !important;
+	vertical-align: middle;
 }
 
 .popup-head .gold-oth {
-    display: table-cell!important;
-    vertical-align: middle;
+	padding-left: 30px;
+	display: table-cell !important;
+	vertical-align: middle;
 }
 
 /* Прокрутка */
 
 ::-webkit-scrollbar-button {
-background-image:url('');
-background-repeat:no-repeat;
-width:5px;
-height:0px
+	background-image: url('');
+	background-repeat: no-repeat;
+	width: 5px;
+	height: 0px;
 }
 
 ::-webkit-scrollbar-track {
-background-color: #A9ECFF;
+	background-color: #a9ecff;
 }
 
 ::-webkit-scrollbar-thumb {
--webkit-border-radius: 0px;
-border-radius: 0px;
-background-color:#009DC8;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	background-color: #009dc8;
 
-border-radius: 10px;
+	border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover{
-background-color:#006C89;
-
+::-webkit-scrollbar-thumb:hover {
+	background-color: #006c89;
 }
 
-::-webkit-resizer{
-background-image:url('');
-background-repeat:no-repeat;
-width:4px;
-height:0px;
-
+::-webkit-resizer {
+	background-image: url('');
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 0px;
 }
 
-::-webkit-scrollbar{
-width: 17px;
+::-webkit-scrollbar {
+	width: 8px;
 }
 
 .cards a {
-    display: block;
+	display: block;
+}
+
+.ent {
+	cursor: pointer;
+    width: 218px;
+    height: 335px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.4s ease 0s;
+    z-index: 1;
+	margin-top: 29px;
+}
+
+/* .ent:hover {
+	transform: scale(1.2);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	z-index: 2;
+} */
+
+.ent:not(:last-child) {
+	margin-right: 23px;
+}
+
+.enterprices {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 974px;
 }
 
 .buy-card {
-    margin-bottom: 15px;
-    width: 228px;
-    max-width: 25%;
-    box-sizing: border-box;
-    margin-right: 15px;
+	margin-bottom: 15px;
+	width: 228px;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 .popup_content-buy .popup-head h1 {
-    display:table-cell!important;
-    vertical-align:middle;
-    text-align: center;
-    padding-right: 0px;
-    font-size: 23px;
+	display: table-cell !important;
+	vertical-align: middle;
+	text-align: center;
+	padding-right: 0px;
+	font-size: 23px;
 }
 
 .buy-buttons {
-    margin: 0 auto;
-    width: 432px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	margin: 0 auto;
+	width: 432px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .popup_content-buy .popup-inside {
-    background: #5CC5E1;
-    border: 8px solid #009DC8;
+	background: #5cc5e1;
+	border: 8px solid #009dc8;
 }
 
 .card-size-store {
-    margin: 45px 25%;
-    width: 277px;
-    height: 430px;
+	margin: 45px 25%;
+	width: 277px;
+	height: 430px;
 }
 
 /* Часть хода другого игрока */
-

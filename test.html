@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=1' />
+</head>
+<body>
+    <a onclick="op_card()" href="#buy" class="buy-card"><img src="images/6entrpr.png" alt="" class="card-size"></a>
+    <div id="crds" class="cards">
+        <img class="buy-card" src="images/railwaystation.png" alt="" class="card-size">
+        <img class="buy-card" src="images/shoppingcenter.png" alt="" class="card-size">
+        <img class="buy-card" src="images/TVtower.png" alt="" class="card-size">
+        <img class="buy-card" src="images/amusementpark.png" alt="" class="card-size">
+        
+        <img class="buy-card" src="images/wheatfield-start.png" alt="" class="card-size">
+        <img class="buy-card" src="images/bakery-start.png" alt="" class="card-size">
+    </div>
+
+    <script>
+        function op_card() {
+            var img = document.createElement("img");
+            img.classList = "buy-card";
+            img.src = "images/" + 1 + "entrpr.png";
+            document.getElementById("crds").appendChild(img);
+            
+        };
+    </script>
+</body>
+</html>

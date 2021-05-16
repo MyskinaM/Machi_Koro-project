@@ -5,20 +5,21 @@
     <title>Мачи Коро - Главная</title>
    
     <link rel="stylesheet" href="style.css">
-    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=1' />
 </head>
 <body>
+
+    <!-- стартовое состояние стартовой страницы -->
     <div class="wrapper">
         <div id="menu" class="main-menu">
             <div class="main-menu-left">
                 <div class="logo">
-                    <img src="images/machi-koro-logo.png" alt="">
+                    <img src="images/machi-koro-logo.png" alt=""> 
                 </div>
-                <a class="button674" href="#login-ingame">продолжить игру</a>
-                <a class="button674" href="#login-innewgame">начать игру</a>            
+                <a class="button674" href="#login-ingame">продолжить игру</a> <!-- открывает вход -->
+                <a class="button674" href="#login-innewgame">начать игру</a> <!-- открывает вход -->            
             </div>
             <div class="main-menu-right">
-                <a href="#login" class="bookmark">
+                <a href="#login" class="bookmark"> <!-- иконка профиля, открывает вход -->
                     <div class="status">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18" r="16" fill="#F46161" stroke="#009DC8" stroke-width="4"/>
@@ -26,7 +27,7 @@
                     </div>
                     <img  src="images/ava-def.png" class="avainmenu">
                 </a>
-                <a href="Machi Koro RULEBOOK PRINT.pdf" target="_blank" class="bookmark">
+                <a href="Machi Koro RULEBOOK PRINT.pdf" target="_blank" class="bookmark"> <!-- иконка правил, открывает правила -->
                     <svg width="114" height="115" viewBox="0 0 114 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="12.5" y="8.5" width="89" height="98" rx="15.5" fill="#5CC5E1" stroke="#009DC8" stroke-width="3"/>
                         <circle cx="36.3782" cy="32.4304" r="6.18261" fill="white" stroke="#009DC8" stroke-width="3"/>
@@ -38,24 +39,26 @@
                         </svg>
                     </a>
 
-                <a href="https://play.lavro.ru/" class="bookmark">
+                <a href="https://play.lavro.ru/" class="bookmark"> <!-- иконка игры, открывает все игры -->
                     <img src="images/games.png" alt="" class="oth-games">
-                    </a>  
+                </a>  
             </div>
         </div>
     </div>
 
-    <div id="login" class="login">
+    <div id="login" class="login"> <!-- всплывающее окно входа в аккаунт, открывается при нажатии на иконку профиля -->
         <a href="#menu" class="login_area"></a>
         <div class="login_body">
             <div class="login_content">
+                <!-- это крестик так выглядит -->
                 <a href="#menu" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="31" cy="31" r="27" fill="#A9ECFF" stroke="#5CC5E1" stroke-width="8"/>
                     <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
                     <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
                     </svg>
-                    </a>
-                <form name="log-in">
+                </a>
+                <!-- форма входа в аккаунт -->
+                <form name="log_in">
                         <div class="login_title">вход в аккаунт</div>
                         <div class="blocks">
                             <div class="groups">
@@ -80,7 +83,7 @@
                 </form>
                 <div class="buttons">
                     <a  href="#menu" class="button377">назад</a>
-                    <a href="profile.html" class="button377" onclick="">ок</a>
+                    <a href="profile.html" class="button377" onclick="sendlogin();">ок</a>
                 </div>
             </div>
         </div>
@@ -394,32 +397,6 @@
         </div>
     </div>
 
-    <script>
-    function sendreg() {
-        var ajax=new XMLHttpRequest();
-        var fd=new FormData();
-        fd.set("db","2375"); //указываем бд
-        fd.set("pname","registration"); //указываем процедуру
-        fd.set("p1",document.reg[0].login_n.value); //передаем в параметр p1 логин, т.е. данные из name="reg" и name="login_n"
-        fd.set("p2",document.reg.mail.value);
-        fd.set("p3",document.reg.pw1.value);
-        fd.set("p4",document.reg.pw2.value);
-        ajax.open("POST","https://play.lavro.ru/call.php"); //вроде как это что-то, что позволяет вызвать процедуру
-        ajax.onload=showTxt; //Эээ типа если ответ пришёл, то по этой функции вывод сделает
-        ajax.onerror=showError; //а если ошибка, то вот сюда пойдет?
-        ajax.send(fd); //хотя только вот это вот вроде как отправляет о.о
-    }
-
-    function showTxt(p){
-        var res = JSON.parse(p.target.response);
-        console.log(res);
-        if (res.toString().substr(1,5)=="Error") alert(res);
-        else if (res.Error) alert(p.target.response);
-    }
-
-    function showError(p) {
-        alert(p.target.status);
-    }
-    </script>
+    
 </body>
 </html>
