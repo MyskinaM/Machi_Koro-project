@@ -1129,14 +1129,14 @@ a.game-button:active {
 
 .ent {
 	cursor: pointer;
-    width: 228px;
-    margin-top: 31px;
-    height: 335px;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all 0.4s;
+	width: 228px;
+	margin-top: 31px;
+	height: 335px;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: all 0.4s;
 }
 
 .ent:not(:last-child) {
@@ -1146,17 +1146,22 @@ a.game-button:active {
 .store-card {
 	transition: all 0.4s ease-out;
 	cursor: pointer;
-  }
+}
 
-  .store-card:not(:last-child) {
+.store-card:not(:last-child) {
 	margin-right: 8px;
-  }
-  
-  .store-card:hover {
+}
+
+.store-card:hover {
 	transform: scale(1.2);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	z-index: 2;
-  }
+}
+
+.store-card.disabled {
+	pointer-events: none;
+	filter: grayscale(50%);
+}
 
 .enterprices {
 	display: flex;
