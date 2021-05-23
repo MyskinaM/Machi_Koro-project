@@ -30,30 +30,28 @@
 						<div id="dote9" class="dote"></div>
 					</div>
 				</div>
-				<!-- <div class="dice2" style="display:none;">
+				<div id="dice2" class="dice2" style="display:none;">
                 <div class="six">
-                    <div id="dote1" class="dote" ></div>
-                    <div id="dote2" class="dote" style="opacity:0;"></div> 
-                    <div id="dote3" class="dote"></div>
-                    <div id="dote4" class="dote"></div>
-                    <div id="dote5" class="dote" style="opacity:0;"></div>
-                    <div id="dote6" class="dote"></div>
-                    <div id="dote7" class="dote"></div>
-                    <div id="dote8" class="dote"style="opacity:0;"></div>
-                    <div id="dote9" class="dote"></div>
+                    <div id="dote1_2" class="dote" ></div>
+                    <div id="dote2_2" class="dote" style="opacity:0;"></div> 
+                    <div id="dote3_2" class="dote"></div>
+                    <div id="dote4_2" class="dote"></div>
+                    <div id="dote5_2" class="dote" style="opacity:0;"></div>
+                    <div id="dote6_2" class="dote"></div>
+                    <div id="dote7_2" class="dote"></div>
+                    <div id="dote8_2" class="dote" style="opacity:0;"></div>
+                    <div id="dote9_2" class="dote"></div>
                 </div>
-            </div> -->
+            	</div>
 			</div>
 
 			<div id="game_buttons" class="game-buttons">
-				<a id="roll" class="game-button hov" style="display: none"
-					>Бросок</a
-				>
+				<a id="roll" class="game-button hov" style="display: none">Бросок</a>
+				<a onclick="getIncome()" id="getIncome" class="game-button hov getIncome" style="display: none">Получить доход</a>
 				<a
 					id="store"
 					href="#stores"
 					class="game-button hov"
-					style="display: none"
 					>Рынок</a
 				>
 				<a
@@ -64,6 +62,8 @@
 					>Конец хода</a
 				>
 			</div>
+
+			<a id="GamNam" class="buttonGamNam"></a>
 
 			<a href="#game_menu" class="button178 hov">Меню</a>
 
@@ -217,7 +217,7 @@
 							class="player-name-game png-oth"
 						></div>
 						<div class="gold-oth">
-							<div class="gold-count gc-oth">3</div>
+							<div id="oth_coins2" class="gold-count gc-oth">3</div>
 							<img src="images/gold.png" class="gold-image-oth" />
 						</div>
 						<h1>Карты игрока</h1>
@@ -255,7 +255,7 @@
 								/>
 							</div>
 
-							<div id="enterprices_oth">
+							<div id="enterprices_oth" class="enterprices_oth">
 								<div>
 									<img
 										class="buy-card card-size"
@@ -319,7 +319,7 @@
 						class="button575 hov"
 						>Как играть</a
 					>
-					<a href="#surrender" class="button575 hov">Сдаться</a>
+					<a id="sur" href="#surrender" class="button575 hov">Сдаться</a>
 					<a href="#exit" class="button575 hov">Выйти</a>
 				</div>
 			</div>
@@ -334,7 +334,7 @@
 						<label for="">Вы уверены, что хотите сдаться?</label>
 						<div class="container">
 							<a href="#game_menu" class="button377">нет</a>
-							<a href="index.html" class="button377">да</a>
+							<a onclick="surrender()" href="index.html" class="button377">да</a>
 						</div>
 					</div>
 				</div>
@@ -350,8 +350,8 @@
 					</div>
 					<div class="group">
 						<div class="container">
-							<a href="#game_menu" class="button377 fs68">1</a>
-							<a href="index.html" class="button377 fs68">2</a>
+							<a href="#" onclick="roll(1)" class="button377 fs68">1</a>
+							<a href="#" onclick="roll(2)" class="button377 fs68">2</a>
 						</div>
 					</div>
 				</div>
@@ -367,7 +367,7 @@
 						<label for="">Вы уверены, что хотите выйти?</label>
 						<div class="container">
 							<a href="#game_menu" class="button377">нет</a>
-							<a href="index2.html" class="button377">да</a>
+							<a onclick="exit()" href="index.html" class="button377">да</a>
 						</div>
 					</div>
 				</div>
@@ -420,7 +420,8 @@
 					</div>
 					<div class="popup-inside">
 						<div class="cards">
-							<a
+							<!-- Вокзал -->
+							<a 
 								data-item="4"
 								onclick="op_card()"
 								class="buy-card store-card"
@@ -429,6 +430,7 @@
 									alt=""
 									class="card-size"
 							/></a>
+							<!-- Торговый центр -->
 							<a
 								data-item="10"
 								onclick="op_card()"
@@ -438,6 +440,7 @@
 									alt=""
 									class="card-size"
 							/></a>
+							<!-- Телебашня -->
 							<a
 								data-item="16"
 								onclick="op_card()"
@@ -447,6 +450,7 @@
 									alt=""
 									class="card-size"
 							/></a>
+							<!-- Парк развлечений -->
 							<a
 								data-item="22"
 								onclick="op_card()"
@@ -643,5 +647,7 @@
 		<script src="buy.js"></script>
 		<script src="op_card.js"></script>
 		<script src="finish_move.js"></script>
+		<script src="exit.js"></script>
+		<script src="getIncome.js"></script> 
 	</body>
 </html>

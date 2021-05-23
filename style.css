@@ -19,7 +19,22 @@ p {
 	font-size: 23px;
 }
 
+.center {
+	text-align: center;
+}
+
+.errReg {
+	margin-top: -39px;
+    padding-bottom: 13px;
+}
+
+.erWrLgPs {
+	color: #C7144D;
+	font-family:Arial, Helvetica, sans-serif
+}
+
 .wrapper {
+	/* padding-top: 34px; */
 	width: 1170px;
 	margin: 0 auto;
 }
@@ -36,7 +51,9 @@ p {
 
 .win_back {
 	width: 1170px;
-	height: 937px;
+	min-height: 927px;
+	height: 100%;
+    padding-bottom: 10px;
 	background-color: #009dc8;
 }
 
@@ -97,7 +114,7 @@ p {
 
 .status {
 	position: absolute;
-	margin-top: 71px;
+	margin-top: 82px;
 	margin-left: 78px;
 }
 
@@ -173,6 +190,25 @@ a.button575 {
 	border-radius: 10px;
 	text-align: center;
 	background: #0086ab;
+}
+
+.wrCode {
+	margin-top: 18px;
+}
+
+.buttonGamNam
+{
+	border-radius: 10px;
+    text-align: center;
+    background: rgb(0, 134, 171);
+    position: fixed;
+    width: 464px;
+    font-size: 21px;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    top: 0px;
+    margin-top: -8px;
+    margin-left: 474px;
 }
 
 a.button575 {
@@ -310,6 +346,7 @@ a.bookmark:active {
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.2s ease 0s;
+	z-index: 2;
 }
 
 .login:target,
@@ -487,10 +524,6 @@ a.bookmark:active {
 	display: block;
 }
 
-.oth_pl_cards {
-	z-index: 2;
-}
-
 .oth-games {
 	margin-left: 6px;
 }
@@ -638,10 +671,17 @@ label {
 	width: 118px;
 	padding: 23px 0;
 	text-align: center;
+	cursor: pointer;
+}
+
+.invite {
+	margin-top: 30px;
+	width: 278px !important;
 }
 
 .button-delete {
 	background-color: #ff9999;
+	
 }
 
 .button-play {
@@ -955,9 +995,7 @@ figure {
 .cup {
 	margin-left: 992px;
 	position: fixed;
-
 	margin-top: 176px;
-
 	border-radius: 10px;
 }
 
@@ -1137,7 +1175,7 @@ a.game-button:active {
 }
 
 .ent {
-	cursor: pointer;
+	cursor:default;
 	width: 228px;
 	margin-top: 31px;
 	height: 335px;
@@ -1152,6 +1190,11 @@ a.game-button:active {
 	margin-right: 10px;
 }
 
+.enterprices_oth {
+	display: flex;
+    flex-wrap: wrap;
+}
+
 .store-card {
 	transition: all 0.4s ease-out;
 	cursor: pointer;
@@ -1161,15 +1204,27 @@ a.game-button:active {
 	margin-right: 8px;
 }
 
+.nck {
+	margin-left: 7px;
+}
+
 .store-card:hover {
 	transform: scale(1.2);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	z-index: 2;
 }
 
+.heading {
+	margin-bottom: 8px;
+}
+
 .store-card.disabled {
 	pointer-events: none;
 	filter: grayscale(100%);
+}
+
+.store-card.disabledSpecial {
+	pointer-events: none;
 }
 
 .enterprices {

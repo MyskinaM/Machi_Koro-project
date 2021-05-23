@@ -15,11 +15,11 @@
                 <div class="logo">
                     <img src="images/machi-koro-logo.png" alt=""> 
                 </div>
-                <a class="button674" href="#login-ingame">продолжить игру</a> <!-- открывает вход -->
-                <a class="button674" href="#login-innewgame">начать игру</a> <!-- открывает вход -->            
+                <a id="inGame" class="button674 hov">продолжить игру</a> <!-- открывает вход -->
+                <a id="inNewGame" class="button674 hov">начать игру</a> <!-- открывает вход -->            
             </div>
             <div class="main-menu-right">
-                <a href="#login" class="bookmark"> <!-- иконка профиля, открывает вход -->
+                <a id="avaNik" class="bookmark"> <!-- иконка профиля, открывает вход -->
                     <div class="status">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18" r="16" fill="#F46161" stroke="#009DC8" stroke-width="4"/>
@@ -70,104 +70,31 @@
                                     <label for="">пароль</label>
                                     <input placeholder="введите пароль" type="password" maxlength=30 name="pw">
                                     <a class="fyp" href="#forg-yo-pas">забыли пароль?</a>
+                                    
                                 </div>
+                                
                             </div>
+                            
                             <div class="groups">
                                 <div class="groups-fon">
                                     <div class="hry">Ещё не регистрировались?</div> 
-                                    <a href="#registration" class="button278">регистрация</a>
+                                    <a href="#registration" class="button278 hov">регистрация</a>
                                 </div>
+                                <div id="erWrLgPs" class="erWrLgPs" style="display: none">Ваших учётных данных нет в системе</div>
                                 
                             </div>
                         </div>
                 </form>
                 <div class="buttons">
-                    <a  href="#menu" class="button377">назад</a>
-                    <a href="profile.html" class="button377" onclick="sendlogin();">ок</a>
+                    <a  href="#menu" class="button377 hov">назад</a>
+                    <!-- href="profile.html" -->
+                    <a onclick="logIn()"  class="button377 hov">ок</a> 
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="login-ingame" class="login">
-        <a href="#menu" class="login_area"></a>
-        <div class="login_body">
-            <div class="login_content">
-                <a href="#menu" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="31" cy="31" r="27" fill="#A9ECFF" stroke="#5CC5E1" stroke-width="8"/>
-                    <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                    </svg>
-                    </a>
-                <form name="log-in">
-                        <div class="login_title">вход в аккаунт</div>
-                        <div class="blocks">
-                            <div class="groups">
-                                <div class="group">
-                                    <label for="">логин</label>
-                                    <input placeholder="введите логин" type="text" maxlength=8 name="login_n">
-                                </div>
-                                <div class="group">
-                                    <label for="">пароль</label>
-                                    <input placeholder="введите пароль" type="password" maxlength=30 name="pw">
-                                    <a class="fyp" href="#forg-yo-pas">забыли пароль?</a>
-                                </div>
-                            </div>
-                            <div class="groups">
-                                <div class="groups-fon">
-                                    <div class="hry">Ещё не регистрировались?</div> 
-                                    <a href="#registration" class="button278">регистрация</a>
-                                </div>
-                            </div>
-                        </div>
-                </form>
-                <div class="buttons">
-                    <a  href="#menu" class="button377">назад</a>
-                    <a href="cont-gam.html" class="button377" onclick="">ок</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="login-innewgame" class="login">
-        <a href="#menu" class="login_area"></a>
-        <div class="login_body">
-            <div class="login_content">
-                <a href="#menu" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="31" cy="31" r="27" fill="#A9ECFF" stroke="#5CC5E1" stroke-width="8"/>
-                    <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                    </svg>
-                    </a>
-                <form name="log-in">
-                        <div class="login_title">вход в аккаунт</div>
-                        <div class="blocks">
-                            <div class="groups">
-                                <div class="group">
-                                    <label for="">логин</label>
-                                    <input placeholder="введите логин" type="text" maxlength=8 name="login_n">
-                                </div>
-                                <div class="group">
-                                    <label for="">пароль</label>
-                                    <input placeholder="введите пароль" type="password" maxlength=30 name="pw">
-                                    <a class="fyp" href="#forg-yo-pas">забыли пароль?</a>
-                                </div>
-                            </div>
-                            <div class="groups">
-                                <div class="groups-fon">
-                                    <div class="hry">Ещё не регистрировались?</div> 
-                                    <a href="#registration" class="button278">регистрация</a>
-                                </div>
-                            </div>
-                        </div>
-                </form>
-                <div class="buttons">
-                    <a  href="#menu" class="button377">назад</a>
-                    <a href="new-gam.html" class="button377" onclick="">ок</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <div id="forg-yo-pas" class="forg-yo-pas">
         <a href="#menu" class="forg-yo-pas_area"></a>
@@ -185,8 +112,8 @@
                             <label for="">Введите свою почту, чтобы сбросить пароль</label>
                             <input placeholder="введите почту" type="email" name="mail">
                             <div class="container">
-                                <a  href="#login" class="button377">назад</a>
-                                <a href="#resetpas" class="button377" onclick="">ок</a>
+                                <a  href="#login" class="button377 hov">назад</a>
+                                <a href="#resetpas" class="button377 hov" onclick="">ок</a>
                             </div>
                         </div>
                 </div>
@@ -226,105 +153,20 @@
                                     <label for="">подтверждение пароля</label>
                                     <input placeholder="повторите пароль" type="password" maxlength=30 name="pw2">
                                 </div>
-                                
                             </div>
                         </div>
+                        <div id="errReg" class="erWrLgPs errReg"></div>
                 </form>
                 <div class="buttons">
-                    <a  href="#login" class="button377">назад</a>
-                    <a  href="#check-email" class="button377" onclick="sendreg();">ок</a>
+                    <a  href="#login" class="button377 hov">назад</a>
+                    <!-- href="#check-email" -->
+                    <a   class="button377 hov" onclick="registration();">ок</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="registration-ingame" class="registration">
-        <a href="#login" class="registration_area"></a>
-        <div class="registration_body">
-            <div class="registration_content">
-                <a href="#login" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="31" cy="31" r="27" fill="#A9ECFF" stroke="#5CC5E1" stroke-width="8"/>
-                    <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                    </svg>
-                    </a>
-                <form name="reg">
-                        <div class="login_title">регистрация</div>
-                        <div class="blocks">
-                            <div class="groups">
-                                <div class="group">
-                                    <label for="">логин</label>
-                                    <input placeholder="введите логин" type="text" maxlength=8 name="login_n">
-                                </div>
-                                <div class="group">
-                                    <label for="">почта</label>
-                                    <input placeholder="введите почту" type="email" name="mail">
-                                </div>
-                            </div>
-                            <div class="groups">
-                                <div class="group">
-                                    <label for="">пароль</label>
-                                    <input placeholder="введите пароль" type="password" maxlength=30 name="pw1">
-                                </div>
-                                <div class="group">
-                                    <label for="">подтверждение пароля</label>
-                                    <input placeholder="повторите пароль" type="password" maxlength=30 name="pw2">
-                                </div>
-                                
-                            </div>
-                        </div>
-                </form>
-                <div class="buttons">
-                    <a  href="#login" class="button377">назад</a>
-                    <a  href="#check-email-ingame" class="button377" onclick="sendreg();">ок</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="registration-innewgame" class="registration">
-        <a href="#login" class="registration_area"></a>
-        <div class="registration_body">
-            <div class="registration_content">
-                <a href="#login" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="31" cy="31" r="27" fill="#A9ECFF" stroke="#5CC5E1" stroke-width="8"/>
-                    <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                    </svg>
-                    </a>
-                <form name="reg">
-                        <div class="login_title">регистрация</div>
-                        <div class="blocks">
-                            <div class="groups">
-                                <div class="group">
-                                    <label for="">логин</label>
-                                    <input placeholder="введите логин" type="text" maxlength=8 name="login_n">
-                                </div>
-                                <div class="group">
-                                    <label for="">почта</label>
-                                    <input placeholder="введите почту" type="email" name="mail">
-                                </div>
-                            </div>
-                            <div class="groups">
-                                <div class="group">
-                                    <label for="">пароль</label>
-                                    <input placeholder="введите пароль" type="password" maxlength=30 name="pw1">
-                                </div>
-                                <div class="group">
-                                    <label for="">подтверждение пароля</label>
-                                    <input placeholder="повторите пароль" type="password" maxlength=30 name="pw2">
-                                </div>
-                                
-                            </div>
-                        </div>
-                </form>
-                <div class="buttons">
-                    <a  href="#login" class="button377">назад</a>
-                    <a  href="#check-email-innewgame" class="button377" onclick="sendreg();">ок</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <div id="check-email" class="check-email">
         <a href="profile.html" class="check-email_area"></a>
@@ -336,49 +178,15 @@
                         <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
                         </svg>
                         </a>
-                    <div class="check-email_text">Поздравляем! Ваша регистрация прошла успешно :)<br>
+                    <div class="check-email_text">Поздравляем! Ваша регистрация прошла успешно :)</div>
+                    <!-- <br>
                         Вам было отправлено письмо для подтверждения регистрации.<br>
-                        У вас есть 7 дней на потдверждение аккаунта.</div>
-                    <a  href="profile.html" class="button377">ок</a>
+                        У вас есть 7 дней на потдверждение аккаунта. -->
+                    <a  id="sucReg" class="button377 hov">ок</a>
                 </div>
         </div>
     </div>
 
-    <div id="check-email-ingame" class="check-email">
-        <a href="profile.html" class="check-email_area"></a>
-        <div class="check-email_body">
-                <div class="check-email_content">
-                    <a href="profile.html" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="31" cy="31" r="27" fill="#A9ECFF" stroke="#5CC5E1" stroke-width="8"/>
-                        <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                        <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                        </svg>
-                        </a>
-                    <div class="check-email_text">Поздравляем! Ваша регистрация прошла успешно :)<br>
-                        Вам было отправлено письмо для подтверждения регистрации.<br>
-                        У вас есть 7 дней на потдверждение аккаунта.</div>
-                    <a  href="cont-gam.html" class="button377">ок</a>
-                </div>
-        </div>
-    </div>
-
-    <div id="check-email-innewgame" class="check-email">
-        <a href="profile.html" class="check-email_area"></a>
-        <div class="check-email_body">
-                <div class="check-email_content">
-                    <a href="profile.html" class="popup_close hov"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="31" cy="31" r="27" fill="#A9ECFF" stroke="#5CC5E1" stroke-width="8"/>
-                        <path d="M21.2248 21.2666L39.0037 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                        <path d="M39.0038 21.2666L21.2249 40.2904" stroke="#5CC5E1" stroke-width="8" stroke-linecap="round"/>
-                        </svg>
-                        </a>
-                    <div class="check-email_text">Поздравляем! Ваша регистрация прошла успешно :)<br>
-                        Вам было отправлено письмо для подтверждения регистрации.<br>
-                        У вас есть 7 дней на потдверждение аккаунта.</div>
-                    <a  href="new-gam.html" class="button377">ок</a>
-                </div>
-        </div>
-    </div>
 
     <div id="resetpas" class="check-email">
         <a href="#menu" class="check-email_area"></a>
@@ -392,11 +200,14 @@
                         </a>
                     <div class="check-email_text">Пожалуйста, проверьте вашу почту.<br> 
                         Вы должны были получить письмо, <br>содержащее инструкции, чтобы<br> восстановить ваш пароль.</div>
-                    <a href="#menu" class="button377">ок</a>
+                    <a href="#menu" class="button377 hov">ок</a>
                 </div>
         </div>
     </div>
 
+    <script src="logIn.js"></script>
+    <script src="index.js"></script>   
+    <script src="registration.js"></script>   
     
 </body>
 </html>

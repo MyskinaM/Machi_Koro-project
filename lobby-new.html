@@ -10,34 +10,42 @@
         <div class="win_back">
             <h1>лобби</h1>
             <div class="win_content">
-                <a href="new-gam.html" class="button278">вернуться<br> назад</a>
-                <a href="game.html" class="button278">go to<br> game.html</a>
+                <a onclick="leave()" href="new-gam.html" class="button278">вернуться<br> назад</a>
             </div>
             <div class="player-slots">
+                <!-- Вот эта штука отображается только создателю лобби :3 -->
                 <div class="match-type">
-                    <p>Тип матча:</p>
+                    <p class="heading">Тип матча:</p>
                     <div class="match-type-container">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="18" cy="18" r="16" fill="#61F46F" stroke="#0086AB" stroke-width="4"/>
+                            <svg onclick="changPriv(0)" class="chngpr hov" style="color: #61F46F;" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="16" fill="currentColor" stroke="#0086AB" stroke-width="4"/>
                             </svg>
                         <p class="match-type-txt">открытый</p>
                     </div>
                     <div class="match-type-container">
-                            <svg class="hov" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="18" cy="18" r="16" fill="#F46161" stroke="#0086AB" stroke-width="4"/>
+                            <svg onclick="changPriv(1)" class="chngpr hov" style="color: #F46161;" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="16" fill="currentColor" stroke="#0086AB" stroke-width="4"/>
                             </svg>
                         <p  class="match-type-txt">закрытый</p>
                     </div>
+                    <p class="heading">код приглашения:</p>
+                    <div class="field invite">
+                        <div id="code" class="no-input"></div>
+                    </div>
+                    <p class="heading">Название игры:</p>
+                    <p id="gamNam" class="match-type-txt">открытый</p>
                     
                 </div>
+
                 <div class="player-slot">
                     <div class="player-slot_content">
                             <div class="avatar-container avatar-size-lobby">
                                 <img src="images/ava.png" class="avatar-image">
                             </div>
-                            <div class="player-name">Maki</div>
+                            <div id="plNam" class="player-name"></div>
                     </div>
                 </div>
+                
                 <div class="player-slot">
                     <div class="player-slot_content">
                             <div class="avatar-container avatar-size-lobby">
@@ -52,6 +60,9 @@
         </div>
     </div>
 
-    
+    <script src="lobby.js"></script> 
+    <script src="changPriv2.js"></script>
+    <script src="leave2.js"></script>
+    <script src="lobbySt.js"></script>
 </body>
 </html>

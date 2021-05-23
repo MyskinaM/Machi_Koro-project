@@ -12,10 +12,12 @@
         <div class="win_back">
             <h1>продолжить игру</h1>
             <div class="win_content">
-                <a href="index2.html" class="button278">&lt;- вернуться<br>&emsp;назад</a>
+                <a href="index.html" class="button278">&lt;- вернуться<br>&emsp;назад</a>
             </div>
-            <div class="slots">
-                <div class="game-slot">
+            <div id="slots" class="slots">
+                <div id="center" class="center" style="display: none">Вы не состоите ни в одном лобби, самое время найти игру!)</div>
+                
+                <!-- <div class="game-slot">
                     <div class="game-slot_content">
                         <div class="game-name">Самая крутая игра</div>
                         <svg width="4" height="65" viewBox="0 0 4 65" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,10 +39,11 @@
                         <svg width="4" height="65" viewBox="0 0 4 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 0V65" stroke="white" stroke-width="3" />
                         </svg>
-                        <a href="" class="button-delete">удалить</a>
+                        <a onclick="leave()" class="button-delete">покинуть</a>
                         <a href="lobby.html" class="button-play">играть</a>
                     </div>
                 </div>
+
                 <div class="game-slot">
                     <div class="game-slot_content">
                         <div class="game-name">Бегинерс гейм</div>
@@ -63,10 +66,12 @@
                         <svg width="4" height="65" viewBox="0 0 4 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 0V65" stroke="white" stroke-width="3" />
                         </svg>
-                        <a href="" class="button-delete">удалить</a>
+                        <a href="" class="button-delete">покинуть</a>
+                        ☀
                         <a href="lobby.html" class="button-play">играть</a>
                     </div>
                 </div>
+                
                 <div class="game-slot">
                     <div class="game-slot_content">
                         <div class="game-name">Топ одуванчиков</div>
@@ -89,16 +94,18 @@
                         <svg width="4" height="65" viewBox="0 0 4 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 0V65" stroke="white" stroke-width="3" />
                         </svg>
-                        <a href="" class="button-delete">удалить</a>
+                        <a href="" class="button-delete">покинуть</a>
                         <a href="lobby.html" class="button-play">играть</a>
                     </div>
-                </div>
+                </div> -->
+
             </div>
 
         </div>
     </div>
 
-
+    <script src="contGam.js"></script> 
+    <script src="leave.js"></script> 
 </body>
 
 </html>

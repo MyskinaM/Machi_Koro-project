@@ -10,7 +10,7 @@
         <div class="win_back">
             <h1>профиль</h1>
             <div class="win_content">
-                <a href="index2.html" class="button278">&lt;- вернуться<br>&emsp;назад</a>
+                <a href="index.html" class="button278">&lt;- вернуться<br>&emsp;назад</a>
                 <a href="#logout" class="button278">выйти из аккаунта</a>
             </div>
             <div class="win_content">
@@ -27,10 +27,10 @@
                     </div>
                     
                 </div>
-                <div class="nickname">maki</div>
-                <a href="#change-pas" class="button-changepas">сменить пароль</a>
+                <div id="nickname" class="nickname">maki</div>
+                <!-- <a href="#change-pas" class="button-changepas">сменить пароль</a> -->
             </div>
-            <div class="win_content">
+            <!-- <div class="win_content">
                 <div class="statistics">
                     <div class="title">Сыграно матчей</div>
                     <div class="figure">0</div>
@@ -49,7 +49,7 @@
                     <div class="title">Построено предприятий</div>
                     <div class="figure">0</div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -68,7 +68,7 @@
                             <label for="">Вы уверены, что вы хотите выйти из аккаунта?</label>
                             <div class="container">
                                 <a href="#profile" class="button377">нет</a>
-                                <a href="index.html" class="button377">да</a>
+                                <a onclick="logOut()" href="index.html" class="button377">да</a>
                             </div>
                         </div>
                 </div>
@@ -116,5 +116,8 @@
                 </div>
         </div>
     </div>
+
+    <script src="logOut.js"></script>
+    <script src="profile.js"></script>
 </body>
 </html>

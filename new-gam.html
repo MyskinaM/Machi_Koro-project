@@ -10,12 +10,14 @@
         <div class="win_back">
             <h1>список игр</h1>
             <div class="win_content">
-                <a href="index2.html" class="button278">&lt;- вернуться<br>&emsp;назад</a>
+                <a href="index.html" class="button278">&lt;- вернуться<br>&emsp;назад</a>
                 <a href="create-game.html" class="button278">Создать<br>игру</a>
                 <a href="#invite" class="button278">ввести код<br>приглашения</a>
             </div>
-            <div class="slots">
-                <div class="game-slot">
+            <div id="slots" class="slots">
+                <div id="center" class="center" style="display: none">Доступных игр нет :( Создайте свою!))</div>
+
+                <!-- <div class="game-slot">
                     <div class="game-slot_content">
                         <div class="game-name">Самая крутая игра</div>
                         <svg width="4" height="65" viewBox="0 0 4 65" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,6 +38,7 @@
                         <a href="lobby-new.html" class="button-play">играть</a>
                     </div>
                 </div>
+                
                 <div class="game-slot">
                     <div class="game-slot_content">
                         <div class="game-name">Бегинерс гейм</div>
@@ -77,7 +80,8 @@
                         </svg>
                         <a href="lobby-new.html" class="button-play">играть</a>
                     </div>
-                </div>
+                </div> -->
+
             </div>
             
         </div>
@@ -98,14 +102,21 @@
                         <div class="group">
                             <label for="">Введите код приглашения</label>
                             <input placeholder="введите код" type="text">
+                            <div id="wrCode" class="erWrLgPs wrCode" style="display: none">Игра не найдена</div>
                             <div class="container">
                                 <a  href="#main" class="button377">назад</a>
-                                <a href="lobby-new.html" class="button377">ок</a>
+                                <!-- href="lobby-new.html" -->
+                                <a onclick="checkInvCode()"  class="button377 hov">ок</a>
                             </div>
                         </div>
                 </div>
             </form>
         </div>
     </div>
+
+    <script src="newGam.js"></script>
+    <script src="checkInvCode.js"></script> 
+     
+    
 </body>
 </html>

@@ -5,7 +5,7 @@ function op_card() {
     var li = src.lastIndexOf("/");
     var fileName = src.substring(li + 1); //тут название картинки лежит
     if (fileName.charAt(1) === 'l') //проверяет вторую букву в названии
-        localStorage.setItem('sel_ent', fileName,10); //закинули название landmark
+        localStorage.setItem('sel_ent_mc', fileName,10); //закинули название landmark
     else
-        localStorage.setItem('sel_ent', parseInt(fileName,10)); //закинули сюда id предприятия
+        localStorage.setItem('sel_ent_mc', parseInt(fileName,10)); //закинули сюда id предприятия
 };

@@ -1,0 +1,1 @@
+document.getElementById('nickname').innerText = localStorage.getItem('login_mc');

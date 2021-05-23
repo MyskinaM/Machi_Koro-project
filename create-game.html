@@ -11,7 +11,8 @@
             <h1>создание игры</h1>
             <div class="win_content">
                 <a href="new-gam.html" class="button278">&lt;- вернуться<br>&emsp;назад</a>
-                <a href="lobby-new.html" class="button278">создать<br>&emsp;&emsp;игру -&gt;</a>
+                <!-- href="lobby-new.html" -->
+                <a onclick="createGam()"  class="button278" style="cursor: pointer;">создать<br>&emsp;&emsp;игру -&gt;</a>
             </div>
             <div class="content972">
                 <form class="flex">
@@ -19,11 +20,9 @@
                         <label for="">название игры</label>
                         <input placeholder="самая крутая игра" type="text" maxlength=18>
                     </div>
-                    <div class="field">
-                        <label for="">код приглашения</label>
-                        <div class="no-input">NC3mW7</div>
-                    </div>
+                    
                 </form>
+                <div id="errCrtGm" class="erWrLgPs errReg" style="display: none">Придумайте другое название, такое уже есть. Ну, или вы вообще забыли его ввести, а надо.</div>
                 <form>
                     <label for="">игроки</label>
                     <div class="players">
@@ -31,7 +30,7 @@
                             <div class="square">
                                 <img  src="images/ava.png" class="avainmenu">
                             </div>
-                            <figcaption>maki</figcaption>
+                            <figcaption id="creatorName">maki</figcaption>
                         </figure>
                         <figure class="player">
                             <div class="square">
@@ -39,7 +38,7 @@
                             </div>
                             <figcaption>Игрок 2</figcaption>
                         </figure>
-                        <figure class="player">
+                        <!-- <figure class="player">
                             <div class="delete hov">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M41 5L5 41M5 5L41 41" stroke="#F46161" stroke-width="13" stroke-linejoin="round"/>
@@ -58,23 +57,25 @@
                                     
                             </div>
                             <figcaption>Игрок 3</figcaption>
-                        </figure>
+                        </figure> -->
                     </div>
                 </form>
+                
+
                 <form>
                     <label for="">тип матча:</label>
                     <div class="match-type_crtgam">
                         <div class="match-type-container marr">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="18" cy="18" r="16" fill="#61F46F" stroke="#0086AB" stroke-width="4"/>
+                            <svg onclick="changPriv(0)" class="chngpr hov" style="color: #61F46F;" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="16" fill="currentColor" stroke="#0086AB" stroke-width="4"/>
                             </svg>
                             <p class="match-type-txt">открытый</p>
                         </div>
-                        <div class="match-type-container">
-                            <svg class="hov" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="18" cy="18" r="16" fill="#F46161" stroke="#0086AB" stroke-width="4"/>
+                        <div  class="match-type-container">
+                            <svg onclick="changPriv(1)" class="chngpr hov" style="color: #F46161;" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="16" fill="currentColor" stroke="#0086AB" stroke-width="4"/>
                             </svg>
-                        <p  class="match-type-txt">закрытый</p>
+                        <p class="match-type-txt">закрытый</p>
                         </div>
                     </div>
                     
@@ -84,7 +85,8 @@
         </div>
     </div>
 
-    
+    <script src="changPriv.js"></script>
+    <script src="createGam.js"></script>
    
 </body>
 </html>
